@@ -1,0 +1,88 @@
+// .bitwala-post {
+//   @include page-translate-to-bottom-80;
+//   &-container {
+//     @include width;
+//     padding: 0 1.6rem;
+//   }
+//   &-post {
+//     margin: auto;
+//     padding-top: 3.2rem;
+//     @media (max-width: $brk-phone - 1) {
+//       padding-top: 1.6rem;
+//     }
+//   }
+//   &-details {
+//     @include flex-column;
+//     @include gap-s;
+//     justify-content: center;
+//     @media (min-width: $brk-tab) {
+//       align-items: center;
+//       text-align: center;
+//       margin-bottom: 6.8rem;
+//     }
+//     a {
+//       &:hover {
+//         text-decoration: none;
+//       }
+//       .bitwala-tag {
+//         &:hover {
+//           background: rgba(90, 133, 215, 0.79);
+//         }
+//       }
+//     }
+//   }
+//   &-title {
+//     @include blog-title;
+//     margin-top: 0;
+//   }
+//   &-tag-data-box {
+//     @include flex-row;
+//   }
+//   &-date {
+//     font: 800 1.6rem $lato;
+//     color: $middleGrey;
+//     letter-spacing: -0.075rem;
+//   }
+//   &-image {
+//     img {
+//       width: 100%;
+//     }
+//   }
+//   &-content {
+//     @include flex-column;
+//     margin: auto;
+//     padding: 6.4rem 2.4rem;
+//     padding-bottom: 0;
+//     max-width: 800px;
+//     min-width: 280px;
+//     @media (max-width: $brk-phone - 1) {
+//       padding: 3.2rem 0;
+//     }
+//     .markdownify h3 {
+//       font-size: 2.8rem;
+//       color: $secondaryAccent;
+//     }
+//   }
+//   &-author {
+//     @include flex-row;
+//     align-items: center;
+//     margin: 2.4rem 0;
+//   }
+//   &-pic {
+//     width: 40px;
+//     border-radius: 50%;
+//     margin-right: 0.8rem;
+//   }
+//   &-name-sign {
+//     @include flex-column;
+//     justify-content: center;
+//   }
+//   &-name {
+//     font: 600 1.2rem $lato;
+//     color: $darkerText;
+//   }
+//   &-sign {
+//     font: 600 1rem $lato;
+//     color: $middleGrey;
+//   }
+// }

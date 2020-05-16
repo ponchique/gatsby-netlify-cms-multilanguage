@@ -1,0 +1,127 @@
+// $tags: 'h2', 'h3', 'h4', 'p', 'small', 'a', 'img' 'span';
+
+// .markdownify {
+//   @include flex-column;
+//   justify-content: center;
+//   h2 {
+//     @include secondary-title;
+//   }
+//   h3 {
+//     @include large-title;
+//   }
+//   h4 {
+//     @include medium-title;
+//     a {
+//       font-size: 2.4rem;
+//     }
+//   }
+//   h5 {
+//     @include small-title;
+//     a {
+//       font-size: 2rem;
+//     }
+//   }
+//   p {
+//     @include text;
+//     word-break: break-word;
+//     a {
+//       font-size: inherit;
+//     }
+//   }
+//   dd {
+//     @include quote;
+//     a {
+//       font-size: 2rem;
+//     }
+//   }
+//   ol,
+//   ul {
+//     li {
+//       @include text;
+//     }
+//   }
+//   em {
+//     @include accent-italic;
+//   }
+//   i {
+//     @include text;
+//     font-style: italic;
+//     a {
+//       font-size: inherit;
+//     }
+//   }
+//   q {
+//     &::after,
+//     &:before {
+//       content: '';
+//     }
+//     // example of this style you can see on PricingPage under Pricing
+//     font: 600 1.6rem $lato;
+//     font-style: normal;
+//     color: $middleGrey;
+//     line-height: 2rem;
+//   }
+//   :only-child {
+//     em {
+//       display: block;
+//       max-width: 480px;
+//       margin: auto;
+//       text-align: center;
+//     }
+//   }
+//   small {
+//     @include small-text;
+//   }
+//   span {
+//     center {
+//       @include text;
+//     }
+//   }
+//   a {
+//     @include link;
+//   }
+//   img {
+//     width: 100%;
+//     &[alt='Icon'] {
+//       width: 192px;
+//     }
+//   }
+//   mark {
+//     display: block;
+//     margin-top: 1.6rem;
+//     width: 37px;
+//     height: 7px;
+//     background: $primaryAccent;
+//     top: -40px;
+//     left: -24px;
+//   }
+//   .Press-italic {
+//     font: 800 2.8rem Lora, serif;
+//     font-style: italic;
+//     color: $middleGrey;
+//     letter-spacing: -1.31px;
+//     line-height: 3.64rem;
+//     margin-bottom: 1.6rem;
+//   }
+//   .Press-intro-title {
+//     font: 800 1.6rem Lato, sans-serif;
+//     color: $secondaryAccent;
+//     letter-spacing: -0.5px;
+//     margin-bottom: 0.8rem;
+//   }
+//   &.body-content {
+//     em,
+//     p em {
+//       @include text;
+//       font-style: italic;
+//       margin: 0;
+//       display: inline;
+//       text-align: left;
+//     }
+//   }
+//   @each $tag in $tags {
+//     #{$tag} {
+//       margin-top: 0;
+//     }
+//   }
+// }
