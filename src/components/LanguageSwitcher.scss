@@ -1,78 +1,14 @@
-// .language-switcher {
-//   display: flex;
-//   flex-wrap: wrap;
-//   position: relative;
-//   text-transform: uppercase;
-//   padding-left: 48px;
-//   padding-right: 24px;
-//   cursor: pointer;
-//   &.de {
-//     .language-switcher-items-dark:first-child a,
-//     .language-switcher-items-light:first-child a {
-//       color: $primaryAccent;
-//     }
-//   }
-//   &.en {
-//     .language-switcher-items-dark:last-child a,
-//     .language-switcher-items-light:last-child a {
-//       color: $primaryAccent;
-//     }
-//   }
-//   &-items {
-//     &-light,
-//     &-dark {
-//       margin: 0;
-//       margin-left: 1.6rem;
-//       a {
-//         font-size: 2rem;
-//         &:hover {
-//           color: $primaryAccent;
-//         }
-//       }
-//     }
-//     &-light {
-//       a {
-//         color: $primaryBlue;
-//       }
-//     }
-//     &-dark {
-//       a {
-//         color: $whitestWhite;
-//       }
-//     }
-//   }
-//   &:before {
-//     content: '';
-//     position: absolute;
-//     width: 2px;
-//     height: 35px;
-//     background: #ffffff;
-//     left: 16px;
-//     top: -5px;
-//   }
-//   &.xs {
-//     @include flex-row;
-//     justify-content: flex-end;
-//     padding: 0;
-//     transform: translate(0, 9.4rem);
-//     &:before {
-//       display: none;
-//     }
-//   }
-//   &.disabled {
-//     cursor: auto;
-//     .language-switcher-items-light,
-//     .language-switcher-items-dark {
-//       opacity: (0.4);
-//       pointer-events: none;
-//     }
-//   }
-//   &.-light {
-//     &:before {
-//       background: $primaryBlue;
-//     }
-//     + .b-button a {
-//       color: $primaryBlue;
-//     }
-//   }
-// }
+.LanguageSwitcher {
+  display: flex;
+  flex-direction: row;
+  margin: 0 4.2rem;
+  &-item, &-item-active {
+    margin: 0 1.6rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #9dc6a7;
+    font-size: 1.8rem;
+  }
+  &-item-active {
+      color: #00ff3e;
+  }
+}

@@ -1,0 +1,23 @@
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  border-bottom: 2px  #9dc6a7 dashed ;
+  &-nav {
+    margin: 0 2.4rem;
+    a {
+      margin: 0 3rem;
+      font-family: 'Press Start 2P', cursive;
+      color: #9dc6a7;
+      font-size: 1.4rem;
+    }
+  }
+  .logo {
+    margin: 0 3rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #9dc6a7;
+    font-size: 1.4rem;
+  }
+}

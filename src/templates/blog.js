@@ -14,7 +14,6 @@ const Blog = ({ data }) => {
     <Layout>
       <Navbar lang={page.language} slug={slug} enableLangSwitcher />
       {/* <BlogBody {...page} blogs={blogs} /> */}
-      
     </Layout>
   )
 }

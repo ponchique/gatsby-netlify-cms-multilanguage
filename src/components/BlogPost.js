@@ -3,8 +3,6 @@ import moment from 'moment'
 import _ from 'lodash'
 import { Link } from 'gatsby'
 
-import Markdownify from '../components/Markdownify'
-
 import './BlogPost.scss'
 
 const Author = ({ name, className }) => {
@@ -13,7 +11,7 @@ const Author = ({ name, className }) => {
       name: 'Hesler',
       pic: '',
       sign: 'Creating awesome content for Bitwala',
-    }
+    },
   ]
 
   const Avatar = autors.map(author =>
@@ -46,11 +44,8 @@ const BlogPost = ({
   return (
     <div className={componentName}>
       <div className={componentName + '-container'}>
-
         <div className={componentName + '-details'}>
-          <h1 className={componentName + '-title'}>
-            {title}
-          </h1>
+          <h1 className={componentName + '-title'}>{title}</h1>
           <div className={componentName + '-tag-data-box'}>
             {/* {tags ? (
               <Link to={`${blogPath}${_.kebabCase(tags)}/`}>
@@ -71,11 +66,10 @@ const BlogPost = ({
         </div>
 
         <div className={componentName + '-image'}>
-            <img src={headerImage} alt={imageAlt} />
+          <img src={headerImage} alt={imageAlt} />
         </div>
 
         <div className={componentName + '-content'}>
-          <Markdownify source={body} className="body-content" />
           <Author name={author} className={componentName} />
         </div>
       </div>

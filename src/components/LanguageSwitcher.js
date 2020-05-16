@@ -5,29 +5,28 @@ import languages from '../data/languages'
 
 import './LanguageSwitcher.scss'
 
-const LanguageSwitcher = ({ slug, disabled, theme }) => {
-  const componentStyle = 'language-switcher'
-  const disabledSwitcher = disabled ? 'disabled' : ''
+const LanguageSwitcher = ({ slug, disabled }) => {
+  const componentStyle = 'LanguageSwitcher'
   let url = slug
-  let activeLanguage
-  if (slug.startsWith('/de/')) {
-    url = disabled ? null : slug.replace('/de/', '/')
-    activeLanguage = 'en'
-  } else {
-    url = disabled ? null : slug.replace('/', '/de/')
-    activeLanguage = 'de'
-  }
+  let activeLanguage = slug.startsWith('/de/') ? 'de' : 'en'
+
   return (
-    <div
-      className={componentStyle + ' ' + activeLanguage + ' ' + disabledSwitcher}
-    >
+    <div className={componentStyle}>
       {languages.langs.map(item => (
-        <div key={item} className={componentStyle + '-items'}>
-          <Link to={url}>{item}</Link>
-        </div>
-      ))}
+
+        <Link
+          className={`${componentStyle}-item${
+            activeLanguage === item[0] ? '-active' : ''
+          }`}
+          to={item[1]}
+        >
+          {item[0]}
+        </Link>
+  ))}
     </div>
   )
+  
+  
 }
 
 export default LanguageSwitcher

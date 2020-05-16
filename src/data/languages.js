@@ -1,5 +1,8 @@
 const languages = {
-  langs: ['en', 'de'],
+  langs: [
+    ['en', '/'],
+    ['de', '/de/'],
+  ],
 }
 
 export default languages

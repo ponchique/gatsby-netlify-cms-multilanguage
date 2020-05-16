@@ -6,22 +6,15 @@ export default class HTML extends React.Component {
     return (
       <html {...this.props.htmlAttributes}>
         <head>
-          <script type="text/javascript" src="/scripts/snippet-vwo.js" />
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          {/* <link rel="shortcut icon" type="image/png" href={favicon} /> */}
           <link
-            href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,900|Lora:400,400i,700,700i|Montserrat:100,200,300,400,500,600,700,800,900"
+            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
             rel="stylesheet"
-          />
-          <script
-            async
-            src="/scripts/console-warning.js"
-            type="text/javascript"
           />
           {this.props.headComponents}
         </head>

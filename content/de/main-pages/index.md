@@ -2,8 +2,14 @@
 templateKey: templates/index
 type: 1
 language: de
-title: Erfahre mehr über Bitwala. Mit Bitcoin einfach bezahlen - Bitwala
+title: Willkommen bei Robco Industries (TM) Termlink
 description: >-
-  Entdecke Bitwala’s Vision, Geschichte und Entwicklung bis zu unserem
-  heutigen Produkt - Banking für die Kryptowelt.
+  Standardisierte Revolverkopf-Steuerungs-Firmware v8
 ---
+
+
+STATUS: Online, Alles klar </br>
+ADMIN: Geschützturm-Verteidigungssystem </br>
+EINHEITEN ANGESCHLOSSEN: 2 </br>
+
+Bitte wählen Sie oben die gewünschte Aktion
