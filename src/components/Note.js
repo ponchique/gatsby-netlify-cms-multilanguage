@@ -1,36 +1,9 @@
 import React from 'react'
-import moment from 'moment'
 import _ from 'lodash'
-import { Link } from 'gatsby'
 
-import './BlogPost.scss'
+import './Note.scss'
 
-const Author = ({ name, className }) => {
-  const autors = [
-    {
-      name: 'Hesler',
-      pic: '',
-      sign: 'Creating awesome content for Bitwala',
-    },
-  ]
-
-  const Avatar = autors.map(author =>
-    name.endsWith(author.name) ? (
-      <div className={className + '-author'} key={author.name}>
-        <img className={className + '-pic'} src={author.pic} />
-        <div className={className + '-name-sign'}>
-          <span className={className + '-name'}>{name || 'Author'}</span>
-          <span className={className + '-sign'}>{author.sign}</span>
-        </div>
-      </div>
-    ) : (
-      ''
-    )
-  )
-  return Avatar
-}
-
-const BlogPost = ({
+const Note = ({
   title,
   headerImage,
   imageAlt,

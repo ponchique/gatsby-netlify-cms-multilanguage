@@ -6,7 +6,7 @@ module.exports = [
       { href: '/', title: 'Howdy Partner' },
       { href: '/journal/', title: 'Journal' },
     ],
-    logo: "Welcome to Robco  Industries (TM) Termlink"
+    logo: 'Welcome to Robco  Industries (TM) Termlink',
   },
   {
     lang: 'de',
@@ -15,7 +15,7 @@ module.exports = [
       { href: '/de/', title: 'Hallo Partner' },
       { href: '/de/journal/', title: 'Die Zeitschrift' },
     ],
-    logo: "Willkommen bei Robco Industries (TM) Termlink"
+    logo: 'Willkommen bei Robco Industries (TM) Termlink',
   },
 ]
 

@@ -9,17 +9,14 @@ const IndexPage = ({ data }) => {
   const { slug: slug } = data.page.fields
   const { frontmatter: page } = data.page
   const { frontmatter: content } = data.content
-  console.log(content)
   return (
     <Layout>
       <Navbar lang={content.language} slug={slug} light enableLangSwitcher />
       <div className="content">
-      <h1>{content.description}</h1>
-      <div className='html'>
-      <Markdown source={data.content.html} escapeHtml={false} />
-
-      </div>
-
+        <h1>{content.description}</h1>
+        <div className="html">
+          <Markdown source={data.page.html} escapeHtml={false} />
+        </div>
       </div>
     </Layout>
   )
@@ -33,6 +30,7 @@ export const indexQuery = graphql`
       fields {
         slug
       }
+      html
       frontmatter {
         language
       }
@@ -44,7 +42,6 @@ export const indexQuery = graphql`
         language: { eq: $language }
       }
     ) {
-      html
       frontmatter {
         language
         title

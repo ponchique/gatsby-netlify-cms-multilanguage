@@ -11,11 +11,22 @@
     color: #9dc6a7;
     font-size: 1.4rem;
   }
+  h3 {
+    margin: 3rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #9dc6a7;
+    font-size: 1.4rem;
+  }
   .html {
     margin: 3rem;
     font-family: 'Press Start 2P', cursive;
     color: #9dc6a7;
     font-size: 1.1rem;
     line-height: 2.5rem;
+  }
+  .note {
+    max-width: 780px;
+    border: 1px solid #9dc6a7;
+    margin: 3rem;
   }
 }

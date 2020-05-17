@@ -1,239 +1,18 @@
-var netlifyCmsPaths = {
-  resolve: `gatsby-plugin-netlify-cms-paths`,
-  options: {
-    cmsConfig: `./static/admin/config.yml`,
-  },
-}
+// var netlifyCmsPaths = {
+//   resolve: `gatsby-plugin-netlify-cms-paths`,
+//   options: {
+//     cmsConfig: `./static/admin/config.yml`,
+//   },
+// }
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
-  siteMetadata: {
-    title: 'Bitwala',
-    siteUrl: 'https://www.bitwala.com/',
-  },
   plugins: [
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `/sitemap.xml`,
-        exclude: ['/de/free-banking', '/awesome-example'],
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-        }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map(edge => {
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-            }
-          }),
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `/sitemap-en.xml`,
-        exclude: ['/de/*', '/de', '/awesome-example', '/de/blog/*'],
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-        }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map(edge => {
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-            }
-          }),
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `/sitemap-en-blog.xml`,
-        exclude: ['/de/blog/*', '/de/*'],
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage(
-              filter: {
-                componentChunkName: {
-                  in: [ "component---src-templates-blog-post-js", "component---src-templates-blog-js", "component---src-templates-category-js"]
-                }
-              }) {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-        }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map(edge => {
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-            }
-          }),
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `/sitemap-en-academy.xml`,
-        exclude: ['/de/*'],
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage(
-              filter: {
-                componentChunkName: {
-                  in: [ "component---src-templates-academy-article-js", "component---src-templates-academy-js"]
-                }
-              }) {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-        }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map(edge => {
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-            }
-          }),
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `/sitemap-de.xml`,
-        exclude: ['/de/free-banking'],
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage(filter: {context: {language: {eq: "de"}}}) {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-        }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map(edge => {
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-            }
-          }),
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `/sitemap-de-blog.xml`,
-        exclude: ['/blog/*'],
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage(
-              filter: {
-                componentChunkName: {
-                  in: [ "component---src-templates-blog-post-js", "component---src-templates-blog-js", "component---src-templates-category-js"]
-                }
-                context: {language: {ne: "en"}}
-              }) {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-        }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map(edge => {
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-            }
-          }),
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `/sitemap-de-academy.xml`,
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage(
-              filter: {
-                componentChunkName: {
-                  in: [ "component---src-templates-academy-article-js", "component---src-templates-academy-js"]
-                }
-                context: {language: {ne: "en"}}
-              }) {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-        }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map(edge => {
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-            }
-          }),
-      },
-    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -262,7 +41,7 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
-    netlifyCmsPaths,
+    // netlifyCmsPaths,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -276,7 +55,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          netlifyCmsPaths, // Including in your Remark plugins will transform any paths in your markdown body.
+          // netlifyCmsPaths, // Including in your Remark plugins will transform any paths in your markdown body.
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -290,7 +69,6 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
     {
       resolve: `gatsby-plugin-netlify-cms`,
@@ -298,11 +76,11 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-netlify-cache',
-      options: {
-        cachePublic: true,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-netlify-cache',
+    //   options: {
+    //     cachePublic: true,
+    //   },
+    // },
   ],
 }

@@ -1,22 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import BlogPost from '../../components/BlogPost'
 
-const BlogPostPreview = ({ entry }) => {
+const NotePreview = ({ entry }) => {
   const data = entry.get('data').toJS()
   return (
     <div className="cms-device-box">
       <div className="cms-device-box-border">
-        <BlogPost {...data} />
+        {/* should be note component which is not created yet */}
       </div>
     </div>
   )
 }
 
-BlogPostPreview.propTypes = {
+NotePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
 }
 
-export default BlogPostPreview
+export default NotePreview
