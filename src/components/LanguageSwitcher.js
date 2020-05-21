@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import languages from '../data/languages'
+import nav from '../data/navbar'
 
 import './LanguageSwitcher.scss'
 
@@ -13,14 +13,14 @@ const LanguageSwitcher = ({ slug }) => {
     : slug.replace('/', '/de/')
   return (
     <div className={componentStyle}>
-      {languages.langs.map(item => (
+      {nav.map(item => (
         <Link
           className={`${componentStyle}-item${
-            activeLanguage === item[0] ? '-active' : ''
+            activeLanguage === item.lang ? '-active' : ''
           }`}
           to={url}
         >
-          {item[0]}
+          {item.lang}
         </Link>
       ))}
     </div>

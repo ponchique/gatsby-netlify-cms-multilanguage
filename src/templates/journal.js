@@ -6,12 +6,11 @@ import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 
 const JournalPage = ({ data }) => {
-  const { slug: slug } = data.page.fields
   const { frontmatter: page } = data.page
   const { edges: blogs } = data.blogs
   return (
     <Layout>
-      <Navbar lang={page.language} slug={slug} enableLangSwitcher />
+      <Navbar lang={page.language} slug={data.page.fields.slug}/>
       <div className="content">
         <h1>{page.title}</h1>
       </div>

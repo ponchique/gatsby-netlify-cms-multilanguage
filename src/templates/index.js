@@ -3,15 +3,13 @@ import Markdown from 'react-markdown'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Navbar from '../components/Navbar'
+import Navbar  from '../components/Navbar'
 
 const IndexPage = ({ data }) => {
-  const { slug: slug } = data.page.fields
-  const { frontmatter: page } = data.page
   const { frontmatter: content } = data.content
   return (
     <Layout>
-      <Navbar lang={content.language} slug={slug} light enableLangSwitcher />
+      <Navbar lang={content.language} slug={data.page.fields.slug} />
       <div className="content">
         <h1>{content.description}</h1>
         <div className="html">
@@ -31,9 +29,6 @@ export const indexQuery = graphql`
         slug
       }
       html
-      frontmatter {
-        language
-      }
     }
     content: markdownRemark(
       frontmatter: {

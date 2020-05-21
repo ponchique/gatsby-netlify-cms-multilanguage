@@ -6,11 +6,10 @@ import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 
 const NotePage = ({ data }) => {
-  const { slug: slug } = data.markdownRemark.fields
   const { frontmatter: note } = data.markdownRemark
   return (
     <Layout>
-      <Navbar lang={note.language} slug={slug} />
+      <Navbar lang={note.language} slug={data.markdownRemark.fields.slug} />
       <div className="note">
         <h3>{note.title}</h3>
         <div className="html">

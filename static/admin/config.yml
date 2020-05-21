@@ -30,7 +30,7 @@ collections:
         fields:
           - { label: Template Key, name: templateKey, widget: hidden }
           - { label: Type, name: type, widget: hidden, default: 1 }
-          - { label: Language, name: language, widget: hidden, default: en }
+          - { label: Language, name: language, widget: select, options: ['en', 'de'], default: en }
           - { label: Title, name: title, widget: string }
           - { label: SEO Description, name: description, widget: text }
 

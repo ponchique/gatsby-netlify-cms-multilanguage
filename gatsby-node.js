@@ -30,10 +30,7 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges.filter(
-      edge => edge.node.frontmatter.templateKey !== 'header'
-    )
-
+    const posts = result.data.allMarkdownRemark.edges
     // this is where pages are being built
     posts.forEach(edge => {
       const id = edge.node.id

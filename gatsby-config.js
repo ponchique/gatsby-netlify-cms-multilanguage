@@ -1,14 +1,3 @@
-// var netlifyCmsPaths = {
-//   resolve: `gatsby-plugin-netlify-cms-paths`,
-//   options: {
-//     cmsConfig: `./static/admin/config.yml`,
-//   },
-// }
-
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
 module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -41,7 +30,6 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
-    // netlifyCmsPaths,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -76,11 +64,5 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-netlify-cache',
-    //   options: {
-    //     cachePublic: true,
-    //   },
-    // },
   ],
 }
