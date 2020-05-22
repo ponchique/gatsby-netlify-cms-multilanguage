@@ -28,9 +28,9 @@ collections:
         name: indexEN
         identifier_field: name
         fields:
-          - { label: Template Key, name: templateKey, widget: hidden }
+          - { label: Template Key, name: templateKey, widget: hidden, default: templates/index  }
           - { label: Type, name: type, widget: hidden, default: 1 }
-          - { label: Language, name: language, widget: select, options: ['en', 'de'], default: en }
+          - { label: Language, name: language, widget: hidden, default: en }
           - { label: Title, name: title, widget: string }
           - { label: SEO Description, name: description, widget: text }
 
